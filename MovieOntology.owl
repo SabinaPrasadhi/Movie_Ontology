@@ -1,0 +1,3856 @@
+@prefix : <http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7> .
+
+<http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#belongsToCountry
+
+:belongsToCountry rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:range :Country ;
+                  
+                  rdfs:domain :Movie .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#belongsToIndustry
+
+:belongsToIndustry rdf:type owl:FunctionalProperty ,
+                            owl:ObjectProperty ;
+                   
+                   rdfs:domain :Movie ;
+                   
+                   rdfs:range :MovieIndustry ;
+                   
+                   owl:inverseOf :isBelongingIndustryOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasActor
+
+:hasActor rdf:type owl:ObjectProperty ;
+          
+          rdfs:range :Actor ;
+          
+          rdfs:domain :Movie ;
+          
+          rdfs:subPropertyOf :hasMoviePersonnel ;
+          
+          owl:inverseOf :isActorOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasAward
+
+:hasAward rdf:type owl:ObjectProperty ;
+          
+          rdfs:range :Award ;
+          
+          rdfs:domain :Movie .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasCostumeDesigner
+
+:hasCostumeDesigner rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:range :CostumeDesigner ;
+                    
+                    rdfs:domain :Movie ;
+                    
+                    rdfs:subPropertyOf :hasMoviePersonnel ;
+                    
+                    owl:inverseOf :isCostumeDesignerOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasDirector
+
+:hasDirector rdf:type owl:ObjectProperty ;
+             
+             rdfs:range :Director ;
+             
+             rdfs:domain :Movie ;
+             
+             rdfs:subPropertyOf :hasMoviePersonnel ;
+             
+             owl:inverseOf :isDirectorOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasEditor
+
+:hasEditor rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :Editor ;
+           
+           rdfs:domain :Movie ;
+           
+           rdfs:subPropertyOf :hasMoviePersonnel ;
+           
+           owl:inverseOf :isEditorOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasEmotion
+
+:hasEmotion rdf:type owl:ObjectProperty ;
+            
+            rdfs:range :Emotion ;
+            
+            rdfs:domain :MovieGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasFemaleActor
+
+:hasFemaleActor rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :FemaleActor ;
+                
+                rdfs:domain :Movie ;
+                
+                rdfs:subPropertyOf :hasActor ;
+                
+                owl:inverseOf :isFemaleActorOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasGenre
+
+:hasGenre rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Movie ;
+          
+          rdfs:range :MovieGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasMPAARating
+
+:hasMPAARating rdf:type owl:ObjectProperty ;
+               
+               rdfs:range :MPAAFilmRating ;
+               
+               rdfs:domain :Movie ;
+               
+               rdfs:subPropertyOf :hasRating .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasMaleActor
+
+:hasMaleActor rdf:type owl:ObjectProperty ;
+              
+              rdfs:range :MaleActor ;
+              
+              rdfs:domain :Movie ;
+              
+              rdfs:subPropertyOf :hasActor ;
+              
+              owl:inverseOf :isMaleActorOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasMovieDistributor
+
+:hasMovieDistributor rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:domain :Movie ;
+                     
+                     rdfs:range :MovieDistributor .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasMoviePersonnel
+
+:hasMoviePersonnel rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:domain :Movie ;
+                   
+                   rdfs:range :MoviePersonnel ;
+                   
+                   owl:inverseOf :isMoviePersonnelOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasMusicalArtist
+
+:hasMusicalArtist rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:domain :Movie ;
+                  
+                  rdfs:range :MusicalArtist ;
+                  
+                  rdfs:subPropertyOf :hasMoviePersonnel ;
+                  
+                  owl:inverseOf :isMusicalArtistOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasProducer
+
+:hasProducer rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :Movie ;
+             
+             rdfs:range :Producer ;
+             
+             rdfs:subPropertyOf :hasMoviePersonnel ;
+             
+             owl:inverseOf :isProducerOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasProductionCompany
+
+:hasProductionCompany rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:domain :Movie ;
+                      
+                      rdfs:range :ProductionCompany ;
+                      
+                      owl:inverseOf :isProductionCompanyOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasRating
+
+:hasRating rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Movie ;
+           
+           rdfs:range :Rating .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasWriter
+
+:hasWriter rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Movie ;
+           
+           rdfs:range :Writer ;
+           
+           rdfs:subPropertyOf :hasMoviePersonnel ;
+           
+           owl:inverseOf :isWriterOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isActorOf
+
+:isActorOf rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Actor ;
+           
+           rdfs:range :Movie ;
+           
+           rdfs:subPropertyOf :isMoviePersonnelOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isAwardOf
+
+:isAwardOf rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Award ;
+           
+           rdfs:range :Movie ;
+           
+           owl:inverseOf :hasAward .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isBelongingCountryOf
+
+:isBelongingCountryOf rdf:type owl:InverseFunctionalProperty ,
+                               owl:ObjectProperty ;
+                      
+                      rdfs:domain :Country ;
+                      
+                      rdfs:range :Movie ;
+                      
+                      owl:inverseOf :belongsToCountry .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isBelongingIndustryOf
+
+:isBelongingIndustryOf rdf:type owl:InverseFunctionalProperty ,
+                                owl:ObjectProperty ;
+                       
+                       rdfs:range :Movie ;
+                       
+                       rdfs:domain :MovieIndustry .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isCostumeDesignerOf
+
+:isCostumeDesignerOf rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:domain :CostumeDesigner ;
+                     
+                     rdfs:range :Movie ;
+                     
+                     rdfs:subPropertyOf :isMoviePersonnelOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isDirectorOf
+
+:isDirectorOf rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :Director ;
+              
+              rdfs:range :Movie ;
+              
+              rdfs:subPropertyOf :isMoviePersonnelOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isEditorOf
+
+:isEditorOf rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :Editor ;
+            
+            rdfs:range :Movie ;
+            
+            rdfs:subPropertyOf :isMoviePersonnelOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isEmotionOf
+
+:isEmotionOf rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :Emotion ;
+             
+             rdfs:range :MovieGenre ;
+             
+             owl:inverseOf :hasEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isFemaleActorOf
+
+:isFemaleActorOf rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:domain :FemaleActor ;
+                 
+                 rdfs:range :Movie ;
+                 
+                 rdfs:subPropertyOf :isActorOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isGenreOf
+
+:isGenreOf rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :Movie ;
+           
+           rdfs:domain :MovieGenre ;
+           
+           owl:inverseOf :hasGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isMPAARatingOf
+
+:isMPAARatingOf rdf:type owl:ObjectProperty ;
+                
+                rdfs:domain :MPAAFilmRating ;
+                
+                rdfs:range :Movie ;
+                
+                owl:inverseOf :hasMPAARating ;
+                
+                rdfs:subPropertyOf :isRatingOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isMaleActorOf
+
+:isMaleActorOf rdf:type owl:ObjectProperty ;
+               
+               rdfs:domain :MaleActor ;
+               
+               rdfs:range :Movie ;
+               
+               rdfs:subPropertyOf :isActorOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isMovieDistributorOf
+
+:isMovieDistributorOf rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:range :Movie ;
+                      
+                      rdfs:domain :MovieDistributor ;
+                      
+                      owl:inverseOf :hasMovieDistributor .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isMoviePersonnelOf
+
+:isMoviePersonnelOf rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:range :Movie ;
+                    
+                    rdfs:domain :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isMusicalArtistOf
+
+:isMusicalArtistOf rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:range :Movie ;
+                   
+                   rdfs:domain :MusicalArtist ;
+                   
+                   rdfs:subPropertyOf :isMoviePersonnelOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isProducerOf
+
+:isProducerOf rdf:type owl:ObjectProperty ;
+              
+              rdfs:range :Movie ;
+              
+              rdfs:domain :Producer ;
+              
+              rdfs:subPropertyOf :isMoviePersonnelOf .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isProductionCompanyOf
+
+:isProductionCompanyOf rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:range :Movie ;
+                       
+                       rdfs:domain :ProductionCompany .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isRatingOf
+
+:isRatingOf rdf:type owl:ObjectProperty ;
+            
+            rdfs:range :Movie ;
+            
+            rdfs:domain :Rating ;
+            
+            owl:inverseOf :hasRating .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#isWriterOf
+
+:isWriterOf rdf:type owl:ObjectProperty ;
+            
+            rdfs:range :Movie ;
+            
+            rdfs:domain :Writer ;
+            
+            rdfs:subPropertyOf :isMoviePersonnelOf .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasIMDbRating
+
+:hasIMDbRating rdf:type owl:DatatypeProperty ;
+               
+               rdfs:subPropertyOf :hasOnlineRating .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasMetacriticRating
+
+:hasMetacriticRating rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:subPropertyOf :hasOnlineRating .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasOnlineRating
+
+:hasOnlineRating rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#hasRottenTomatoesRating
+
+:hasRottenTomatoesRating rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:subPropertyOf :hasOnlineRating .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ActionComedyMovie
+
+:ActionComedyMovie rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :CrossGenreMovie ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :ActionGenre
+                                                                       :ComedyGenre
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :ComedyGenre
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :ActionGenre
+                                   ] ;
+                   
+                   rdfs:comment "A movie that only has action and comedy genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ActionGenre
+
+:ActionGenre rdf:type owl:Class ;
+             
+             rdfs:subClassOf :MovieGenre ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasEmotion ;
+                               owl:someValuesFrom :Anger
+                             ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ActionHybridGenre
+
+:ActionHybridGenre rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :ActionGenre ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasEmotion ;
+                                     owl:someValuesFrom :Anxiety
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasEmotion ;
+                                     owl:someValuesFrom :Anticipation
+                                   ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Actor
+
+:Actor rdf:type owl:Class ;
+       
+       rdfs:subClassOf :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Amusement
+
+:Amusement rdf:type owl:Class ;
+           
+           rdfs:subClassOf :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Anger
+
+:Anger rdf:type owl:Class ;
+       
+       rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Anticipation
+
+:Anticipation rdf:type owl:Class ;
+              
+              rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Anxiety
+
+:Anxiety rdf:type owl:Class ;
+         
+         rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Award
+
+:Award rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BodyHorrorGenre
+
+:BodyHorrorGenre rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :HorrorGenre ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasEmotion ;
+                                   owl:someValuesFrom :Disgust
+                                 ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CerebralScienceGenre
+
+:CerebralScienceGenre rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :SciFiGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ChickFlickGenre
+
+:ChickFlickGenre rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :RomanceGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ClassicWesternGenre
+
+:ClassicWesternGenre rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :WesternGenre ;
+                     
+                     owl:disjointWith :ModernWesternGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ComedyGenre
+
+:ComedyGenre rdf:type owl:Class ;
+             
+             rdfs:subClassOf :MovieGenre ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasEmotion ;
+                               owl:someValuesFrom :Humour
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasEmotion ;
+                               owl:someValuesFrom :Amusement
+                             ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ComedySciFiMovie
+
+:ComedySciFiMovie rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :CrossGenreMovie ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasGenre ;
+                                    owl:someValuesFrom :ComedyGenre
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasGenre ;
+                                    owl:someValuesFrom :SciFiGenre
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasGenre ;
+                                    owl:allValuesFrom [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :ComedyGenre
+                                                                      :SciFiGenre
+                                                                    )
+                                                      ]
+                                  ] ;
+                  
+                  rdfs:comment "A movie that only has comedy and scientific fiction genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CostumeDesigner
+
+:CostumeDesigner rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Country
+
+:Country rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CrimeFantasyMovie
+
+:CrimeFantasyMovie rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :CrossGenreMovie ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :CrimeThrillerGenre
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :CrimeThrillerGenre
+                                                                       :FantasyGenre
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :FantasyGenre
+                                   ] ;
+                   
+                   rdfs:comment "A movie that only has crime and fantasy genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CrimeThrillerGenre
+
+:CrimeThrillerGenre rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :ThrillerGenre ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasEmotion ;
+                                      owl:someValuesFrom :Grief
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasEmotion ;
+                                      owl:someValuesFrom :Fear
+                                    ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CrossGenreMovie
+
+:CrossGenreMovie rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Movie ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :belongsToIndustry ;
+                                   owl:someValuesFrom :MovieIndustry
+                                 ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Director
+
+:Director rdf:type owl:Class ;
+          
+          rdfs:subClassOf :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DisasterThrillerGenre
+
+:DisasterThrillerGenre rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :ThrillerGenre ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasEmotion ;
+                                         owl:someValuesFrom :Sadness
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasEmotion ;
+                                         owl:someValuesFrom :Grief
+                                       ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Disgust
+
+:Disgust rdf:type owl:Class ;
+         
+         rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DramaGenre
+
+:DramaGenre rdf:type owl:Class ;
+            
+            rdfs:subClassOf :MovieGenre ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasEmotion ;
+                              owl:someValuesFrom :PositiveEmotion
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasEmotion ;
+                              owl:someValuesFrom :NegativeEmotion
+                            ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#EcstaticMovie
+
+:EcstaticMovie rdf:type owl:Class ;
+               
+               rdfs:subClassOf :CrossGenreMovie ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:someValuesFrom :ComedyGenre
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:someValuesFrom :RomanceGenre
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:allValuesFrom [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :ComedyGenre
+                                                                   :FantasyGenre
+                                                                   :RomanceGenre
+                                                                 )
+                                                   ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:someValuesFrom :FantasyGenre
+                               ] ;
+               
+               rdfs:comment "A movie that only has romantic, comedy and fantasy genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Editor
+
+:Editor rdf:type owl:Class ;
+        
+        rdfs:subClassOf :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Emotion
+
+:Emotion rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#EmotionalMovie
+
+:EmotionalMovie rdf:type owl:Class ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( :Movie
+                                                           [ rdf:type owl:Class ;
+                                                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :hasGenre ;
+                                                                             owl:someValuesFrom :DisasterThrillerGenre
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :hasGenre ;
+                                                                             owl:someValuesFrom :RomanceGenre
+                                                                           ]
+                                                                         )
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                rdfs:comment "A movie which belongs to either disaster thriller genre or romantic genre" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Excitement
+
+:Excitement rdf:type owl:Class ;
+            
+            rdfs:subClassOf :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FantasyGenre
+
+:FantasyGenre rdf:type owl:Class ;
+              
+              rdfs:subClassOf :MovieGenre ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :Hope
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :Surprise
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :Happiness
+                              ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Fear
+
+:Fear rdf:type owl:Class ;
+      
+      rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FemaleActor
+
+:FemaleActor rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Actor ;
+             
+             owl:disjointWith :MaleActor .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FolkHorrorGenre
+
+:FolkHorrorGenre rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :HorrorGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FoundFootageHorrorGenre
+
+:FoundFootageHorrorGenre rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :HorrorGenre ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasEmotion ;
+                                           owl:someValuesFrom :Anxiety
+                                         ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Grief
+
+:Grief rdf:type owl:Class ;
+       
+       rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Happiness
+
+:Happiness rdf:type owl:Class ;
+           
+           rdfs:subClassOf :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HistoricalRomanceGenre
+
+:HistoricalRomanceGenre rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :RomanceGenre ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasEmotion ;
+                                          owl:someValuesFrom :Hope
+                                        ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Hope
+
+:Hope rdf:type owl:Class ;
+      
+      rdfs:subClassOf :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HorrorComedyMovie
+
+:HorrorComedyMovie rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :CrossGenreMovie ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :HorrorGenre
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :ComedyGenre
+                                                                       :HorrorGenre
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :ComedyGenre
+                                   ] ;
+                   
+                   rdfs:comment "A movie that only has horror and comedy genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HorrorGenre
+
+:HorrorGenre rdf:type owl:Class ;
+             
+             rdfs:subClassOf :MovieGenre ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasEmotion ;
+                               owl:someValuesFrom :Fear
+                             ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Humour
+
+:Humour rdf:type owl:Class ;
+        
+        rdfs:subClassOf :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#IndianCinemaIndustry
+
+:IndianCinemaIndustry rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :MovieIndustry .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#IndustryEndorsedMovie
+
+:IndustryEndorsedMovie rdf:type owl:Class ;
+                       
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:intersectionOf ( :Movie
+                                                                  [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty :belongsToIndustry ;
+                                                                                    owl:someValuesFrom :IndianCinemaIndustry
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty :belongsToIndustry ;
+                                                                                    owl:someValuesFrom :PakistaniMovieIndustry
+                                                                                  ]
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty :belongsToIndustry ;
+                                                                                    owl:someValuesFrom :USFilmIndustry
+                                                                                  ]
+                                                                                )
+                                                                  ]
+                                                                )
+                                           ] ;
+                       
+                       rdfs:comment "A movie which belongs to either Indian Cinema, Pakistani Cinema or Western Cinema" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#InterestingMovie
+
+:InterestingMovie rdf:type owl:Class ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:intersectionOf ( :Movie
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasGenre ;
+                                                               owl:onClass :MovieGenre ;
+                                                               owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
+                                                             ]
+                                                           )
+                                      ] ;
+                  
+                  rdfs:comment "A movie which belongs to at least 3 genres " .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Love
+
+:Love rdf:type owl:Class ;
+      
+      rdfs:subClassOf :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MPAAFilmRating
+
+:MPAAFilmRating rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Rating ;
+                
+                rdfs:comment "Rate a movie's suitability for certain audiences based on its content." .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MaleActor
+
+:MaleActor rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Actor .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MartialArtsActionGenre
+
+:MartialArtsActionGenre rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :ActionGenre ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasEmotion ;
+                                          owl:someValuesFrom :Rage
+                                        ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ModernWesternGenre
+
+:ModernWesternGenre rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :WesternGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Movie
+
+:Movie rdf:type owl:Class ;
+       
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasGenre ;
+                         owl:someValuesFrom :MovieGenre
+                       ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MovieDistributor
+
+:MovieDistributor rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MovieGenre
+
+:MovieGenre rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MovieIndustry
+
+:MovieIndustry rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MoviePersonnel
+
+:MoviePersonnel rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MusicalArtist
+
+:MusicalArtist rdf:type owl:Class ;
+               
+               rdfs:subClassOf :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MysteryGenre
+
+:MysteryGenre rdf:type owl:Class ;
+              
+              rdfs:subClassOf :MovieGenre ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :Surprise
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :Anticipation
+                              ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NegativeEmotion
+
+:NegativeEmotion rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Emotion ;
+                 
+                 owl:disjointWith :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NonWesternCountry
+
+:NonWesternCountry rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Country ;
+                   
+                   owl:disjointWith :WesternCountry .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PakistaniMovieIndustry
+
+:PakistaniMovieIndustry rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :MovieIndustry .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ParanormalRomanceGenre
+
+:ParanormalRomanceGenre rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :RomanceGenre ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasEmotion ;
+                                          owl:someValuesFrom :Disgust
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasEmotion ;
+                                          owl:someValuesFrom :Fear
+                                        ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PopularMovie
+
+:PopularMovie rdf:type owl:Class ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :Movie
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasIMDbRating ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:float ;
+                                                                                owl:withRestrictions ( [ xsd:minExclusive "6.0"^^xsd:float
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasMetacriticRating ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:minExclusive 60
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasRottenTomatoesRating ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:minExclusive 60
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:comment """A movie which has highest ratings in all online rating systems
+""" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PositiveEmotion
+
+:PositiveEmotion rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Emotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Producer
+
+:Producer rdf:type owl:Class ;
+          
+          rdfs:subClassOf :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ProductionCompany
+
+:ProductionCompany rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PsychologicalThrillerGenre
+
+:PsychologicalThrillerGenre rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :ThrillerGenre ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasEmotion ;
+                                              owl:someValuesFrom :Anxiety
+                                            ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Rage
+
+:Rage rdf:type owl:Class ;
+      
+      rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Rating
+
+:Rating rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RomanceGenre
+
+:RomanceGenre rdf:type owl:Class ;
+              
+              rdfs:subClassOf :MovieGenre ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :Love
+                              ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RomancticComedyGenre
+
+:RomancticComedyGenre rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :RomanceGenre ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasEmotion ;
+                                        owl:someValuesFrom :Humour
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasEmotion ;
+                                        owl:someValuesFrom :Amusement
+                                      ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RomanticActionMovie
+
+:RomanticActionMovie rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :CrossGenreMovie ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasGenre ;
+                                       owl:someValuesFrom :ActionGenre
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasGenre ;
+                                       owl:someValuesFrom :RomanceGenre
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasGenre ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( :ActionGenre
+                                                                         :RomanceGenre
+                                                                       )
+                                                         ]
+                                     ] ;
+                     
+                     rdfs:comment "A movie that only has romance and action genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RomanticComedyMovie
+
+:RomanticComedyMovie rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :CrossGenreMovie ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasGenre ;
+                                       owl:someValuesFrom :RomanceGenre
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasGenre ;
+                                       owl:someValuesFrom :ComedyGenre
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasGenre ;
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( :ComedyGenre
+                                                                         :RomanceGenre
+                                                                       )
+                                                         ]
+                                     ] ;
+                     
+                     rdfs:comment "A movies that only has romance and comedy genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RomanticDramaGenre
+
+:RomanticDramaGenre rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :RomanceGenre ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasEmotion ;
+                                      owl:someValuesFrom :PositiveEmotion
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasEmotion ;
+                                      owl:someValuesFrom :NegativeEmotion
+                                    ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RomanticHorrorMovie
+
+:RomanticHorrorMovie rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :CrossGenreMovie ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasGenre ;
+                                       owl:allValuesFrom :ParanormalRomanceGenre
+                                     ] ;
+                     
+                     rdfs:comment "A movie that only has romance and horror genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Sadness
+
+:Sadness rdf:type owl:Class ;
+         
+         rdfs:subClassOf :NegativeEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SciFiGenre
+
+:SciFiGenre rdf:type owl:Class ;
+            
+            rdfs:subClassOf :MovieGenre ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasEmotion ;
+                              owl:someValuesFrom :Surprise
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasEmotion ;
+                              owl:someValuesFrom :Excitement
+                            ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SereneMovie
+
+:SereneMovie rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Movie
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasGenre ;
+                                                          owl:someValuesFrom :TranquilGenre
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:comment "A movie which contains positive emotions" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SpaceTravelGenre
+
+:SpaceTravelGenre rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :SciFiGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SpyAndEspionageActionGenre
+
+:SpyAndEspionageActionGenre rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :ActionGenre ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasEmotion ;
+                                              owl:someValuesFrom :Anticipation
+                                            ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Surprise
+
+:Surprise rdf:type owl:Class ;
+          
+          rdfs:subClassOf :PositiveEmotion .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TechnoThrillerGenre
+
+:TechnoThrillerGenre rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :ThrillerGenre ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasEmotion ;
+                                       owl:someValuesFrom :Rage
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasEmotion ;
+                                       owl:someValuesFrom :Anger
+                                     ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TerrificMovie
+
+:TerrificMovie rdf:type owl:Class ;
+               
+               rdfs:subClassOf :CrossGenreMovie ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:someValuesFrom :CrimeThrillerGenre
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:allValuesFrom [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :ActionGenre
+                                                                   :CrimeThrillerGenre
+                                                                   :HorrorGenre
+                                                                 )
+                                                   ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:someValuesFrom :ActionGenre
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGenre ;
+                                 owl:someValuesFrom :HorrorGenre
+                               ] ;
+               
+               rdfs:comment "A movie that only has horror, crime and action genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ThrillerGenre
+
+:ThrillerGenre rdf:type owl:Class ;
+               
+               rdfs:subClassOf :MovieGenre ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasEmotion ;
+                                 owl:someValuesFrom :Excitement
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasEmotion ;
+                                 owl:someValuesFrom :Anticipation
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasEmotion ;
+                                 owl:someValuesFrom :Surprise
+                               ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TimeTravelGenre
+
+:TimeTravelGenre rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :SciFiGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TragicComedyMovie
+
+:TragicComedyMovie rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :CrossGenreMovie ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :ComedyGenre
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :ComedyGenre
+                                                                       :DisasterThrillerGenre
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGenre ;
+                                     owl:someValuesFrom :DisasterThrillerGenre
+                                   ] ;
+                   
+                   rdfs:comment "A movie that only has comedy and disaster genres" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TranquilGenre
+
+:TranquilGenre rdf:type owl:Class ;
+               
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:intersectionOf ( :MovieGenre
+                                                          [ rdf:type owl:Class ;
+                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasEmotion ;
+                                                                            owl:someValuesFrom :Amusement
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasEmotion ;
+                                                                            owl:someValuesFrom :Excitement
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasEmotion ;
+                                                                            owl:someValuesFrom :Happiness
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasEmotion ;
+                                                                            owl:someValuesFrom :Hope
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasEmotion ;
+                                                                            owl:someValuesFrom :Humour
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasEmotion ;
+                                                                            owl:someValuesFrom :Love
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasEmotion ;
+                                                                            owl:someValuesFrom :Surprise
+                                                                          ]
+                                                                        )
+                                                          ]
+                                                        )
+                                   ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#USFilmIndustry
+
+:USFilmIndustry rdf:type owl:Class ;
+                
+                rdfs:subClassOf :MovieIndustry .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WarAndMillitaryActionGenre
+
+:WarAndMillitaryActionGenre rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :ActionGenre ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasEmotion ;
+                                              owl:someValuesFrom :Fear
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasEmotion ;
+                                              owl:someValuesFrom :Rage
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasEmotion ;
+                                              owl:someValuesFrom :Grief
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasEmotion ;
+                                              owl:someValuesFrom :Sadness
+                                            ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WesternCountry
+
+:WesternCountry rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Country .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WesternGenre
+
+:WesternGenre rdf:type owl:Class ;
+              
+              rdfs:subClassOf :MovieGenre ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :NegativeEmotion
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEmotion ;
+                                owl:someValuesFrom :PositiveEmotion
+                              ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WesternShootEmUpActionGenre
+
+:WesternShootEmUpActionGenre rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :ActionGenre ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasEmotion ;
+                                               owl:someValuesFrom :Rage
+                                             ] .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Writer
+
+:Writer rdf:type owl:Class ;
+        
+        rdfs:subClassOf :MoviePersonnel .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ZombieHorrorGenre
+
+:ZombieHorrorGenre rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :HorrorGenre ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasEmotion ;
+                                     owl:someValuesFrom :Disgust
+                                   ] .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#36thSaturnAwards
+
+<http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#36thSaturnAwards> rdf:type :Award ,
+                                                                                                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AAFilms
+
+:AAFilms rdf:type :MovieDistributor ,
+                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AamirKhan
+
+:AamirKhan rdf:type :MaleActor ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AaronZigman
+
+:AaronZigman rdf:type :MusicalArtist ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AdamSandler
+
+:AdamSandler rdf:type :MaleActor ,
+                      :Producer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AkivaGoldsman
+
+:AkivaGoldsman rdf:type :Producer ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AkshayKumar
+
+:AkshayKumar rdf:type :MaleActor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AllianceFilms
+
+:AllianceFilms rdf:type :MovieDistributor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AmarKaushik
+
+:AmarKaushik rdf:type :Director ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AmeeshaPatel
+
+:AmeeshaPatel rdf:type :FemaleActor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AneesBazmee
+
+:AneesBazmee rdf:type :Director ,
+                      :Writer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AnkitTiwari
+
+:AnkitTiwari rdf:type :MusicalArtist ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AnuMalik
+
+:AnuMalik rdf:type :MusicalArtist ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#AnushkaSharma
+
+:AnushkaSharma rdf:type :FemaleActor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ApsaraFilmProducersGuildAwards
+
+:ApsaraFilmProducersGuildAwards rdf:type :Award ,
+                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ArunKumarArvind
+
+:ArunKumarArvind rdf:type :Editor ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BadBoys
+
+:BadBoys rdf:type :ActionComedyMovie ,
+                  owl:NamedIndividual ;
+         
+         :hasMetacriticRating 41 ;
+         
+         :hasRottenTomatoesRating 43 ;
+         
+         :hasIMDbRating "6.9"^^xsd:float ;
+         
+         :hasEditor :ChristianWager ;
+         
+         :hasProductionCompany :ColumbiaPictures ;
+         
+         :belongsToIndustry :HollywoodMovieIndustry ;
+         
+         :hasProducer :JerryBruckheimer ;
+         
+         :hasMusicalArtist :MarkMancina ;
+         
+         :hasMaleActor :MartinLawrence ;
+         
+         :hasDirector :MichaelBay ;
+         
+         :hasMPAARating :R ;
+         
+         :hasMovieDistributor :SonyPictures ;
+         
+         :hasFemaleActor :TheresaRandle ;
+         
+         :belongsToCountry :UnitedStates ;
+         
+         :hasMaleActor :WillSmith .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BalajiMotionPictures
+
+:BalajiMotionPictures rdf:type :MovieDistributor ,
+                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BhoolBhulaiyaa
+
+:BhoolBhulaiyaa rdf:type :HorrorComedyMovie ,
+                         owl:NamedIndividual ;
+                
+                :hasRottenTomatoesRating 20 ;
+                
+                :hasIMDbRating "7.3"^^xsd:float ;
+                
+                :hasMaleActor :AkshayKumar ;
+                
+                :hasFemaleActor :AmeeshaPatel ;
+                
+                :hasEditor :ArunKumarArvind ;
+                
+                :hasProducer :BhushanKumar ;
+                
+                :belongsToIndustry :BollywoodMovieIndustry ;
+                
+                :hasMovieDistributor :ErosInternational ;
+                
+                :hasAward :FilmFareAwards ;
+                
+                :belongsToCountry :India ;
+                
+                :hasAward :InternationalIndianFilmAcademyAwards ;
+                
+                :hasProducer :KrishanKumar ;
+                
+                :hasWriter :MadhuMuttam ;
+                
+                :hasMusicalArtist :Pritam ;
+                
+                :hasDirector :Priyadarshan ;
+                
+                :hasMovieDistributor :T-Series ;
+                
+                :hasFemaleActor :VidyaBalan ;
+                
+                :hasAward :ZeeCineAwards .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BhushanKumar
+
+:BhushanKumar rdf:type :Producer ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BigBeachFilms
+
+:BigBeachFilms rdf:type :ProductionCompany ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BillyCrudup
+
+:BillyCrudup rdf:type :MaleActor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BlueYonderFilms
+
+:BlueYonderFilms rdf:type :ProductionCompany ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BollywoodMovieIndustry
+
+:BollywoodMovieIndustry rdf:type :IndianCinemaIndustry ,
+                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BrendanFraser
+
+:BrendanFraser rdf:type :MaleActor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#BuenaVistaPicturesDistribution
+
+:BuenaVistaPicturesDistribution rdf:type :MovieDistributor ,
+                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CalBrunker
+
+:CalBrunker rdf:type :Director ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Canada
+
+:Canada rdf:type :WesternCountry ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CatherinWinder
+
+:CatherinWinder rdf:type :Producer ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Chatchai
+
+:Chatchai rdf:type :MusicalArtist ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ChrisDickens
+
+:ChrisDickens rdf:type :Editor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ChristianBale
+
+:ChristianBale rdf:type :MaleActor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ChristianWager
+
+:ChristianWager rdf:type :Editor ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ChristoperWalken
+
+:ChristoperWalken rdf:type :MaleActor ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ChristopherNolan
+
+:ChristopherNolan rdf:type :Director ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ChristopherYoung
+
+:ChristopherYoung rdf:type :MusicalArtist ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Click
+
+:Click rdf:type :EcstaticMovie ,
+                owl:NamedIndividual ;
+       
+       :hasRottenTomatoesRating 34 ;
+       
+       :hasIMDbRating "6.4"^^xsd:float ;
+       
+       :hasMaleActor :AdamSandler ;
+       
+       :hasProducer :AdamSandler ;
+       
+       :hasMaleActor :ChristoperWalken ;
+       
+       :hasProductionCompany :ColumbiaPictures ;
+       
+       :hasDirector :FrankCoraci ;
+       
+       :hasProductionCompany :HappyMadisonProductions ;
+       
+       :belongsToIndustry :HollywoodMovieIndustry ;
+       
+       :hasProducer :JackGiarraputo ;
+       
+       :hasEditor :JeffGoursan ;
+       
+       :hasFemaleActor :KateBeckinsale ;
+       
+       :hasWriter :MarkOKeefe ;
+       
+       :hasProducer :MarkOKeefe ,
+                    :NealHMoritz ;
+       
+       :hasProductionCompany :OriginalFilm ;
+       
+       :hasMPAARating :PG-13 ;
+       
+       :hasProductionCompany :RevolutionStudios ;
+       
+       :hasMusicalArtist :RupertGregsonWilliams ;
+       
+       :hasMovieDistributor :SonyPictures ;
+       
+       :hasWriter :SteveKoren ;
+       
+       :hasProducer :SteveKoren ;
+       
+       :belongsToCountry :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ColumbiaPictures
+
+:ColumbiaPictures rdf:type :ProductionCompany ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#CoryGoodman
+
+:CoryGoodman rdf:type :Writer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DanRae
+
+:DanRae rdf:type :Editor ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DavidArnold
+
+:DavidArnold rdf:type :MusicalArtist ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DavidHayter
+
+:DavidHayter rdf:type :Writer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DavidHoberman
+
+:DavidHoberman rdf:type :Producer ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DavidJulyan
+
+:DavidJulyan rdf:type :MusicalArtist ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DimensionFilms
+
+:DimensionFilms rdf:type :MovieDistributor ,
+                         :ProductionCompany ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DineshVijan
+
+:DineshVijan rdf:type :Producer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DonSimpson
+
+:DonSimpson rdf:type :Producer ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#DonnaGigiliotti
+
+:DonnaGigiliotti rdf:type :Producer ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#EdgarWright
+
+:EdgarWright rdf:type :Director ,
+                      :Writer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#EktaKapoor
+
+:EktaKapoor rdf:type :Producer ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#EmmaThomas
+
+:EmmaThomas rdf:type :Producer ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ErosInternational
+
+:ErosInternational rdf:type :MovieDistributor ,
+                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#EscapeFromPlanetEarth
+
+:EscapeFromPlanetEarth rdf:type :ComedySciFiMovie ,
+                                owl:NamedIndividual ;
+                       
+                       :hasMetacriticRating 35 ;
+                       
+                       :hasRottenTomatoesRating 35 ;
+                       
+                       :hasIMDbRating "5.9"^^xsd:float ;
+                       
+                       :hasMusicalArtist :AaronZigman ;
+                       
+                       :hasMovieDistributor :AllianceFilms ;
+                       
+                       :hasProductionCompany :BlueYonderFilms ;
+                       
+                       :hasMaleActor :BrendanFraser ;
+                       
+                       :hasDirector :CalBrunker ;
+                       
+                       :belongsToCountry :Canada ;
+                       
+                       :hasProducer :CatherinWinder ,
+                                    :DonnaGigiliotti ;
+                       
+                       :hasMPAARating :PG ;
+                       
+                       :hasProductionCompany :RainMakerEntertainment ;
+                       
+                       :hasMaleActor :RobCorddry ;
+                       
+                       :hasEditor :ScottWinlaw ;
+                       
+                       :hasMovieDistributor :TheWeinsteinCompany ;
+                       
+                       :belongsToCountry :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FilmFareAwards
+
+:FilmFareAwards rdf:type :Award ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FoxSearchlightPictures
+
+:FoxSearchlightPictures rdf:type :MovieDistributor ,
+                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#France
+
+:France rdf:type :WesternCountry ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FrancisHaines
+
+:FrancisHaines rdf:type :MusicalArtist ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FrankCoraci
+
+:FrankCoraci rdf:type :Director ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#FromDuskTillDawn
+
+:FromDuskTillDawn rdf:type :TerrificMovie ,
+                           owl:NamedIndividual ;
+                  
+                  :hasMetacriticRating 48 ;
+                  
+                  :hasRottenTomatoesRating 63 ;
+                  
+                  :hasIMDbRating "7.2"^^xsd:float ;
+                  
+                  :hasProductionCompany :DimensionFilms ;
+                  
+                  :hasMovieDistributor :DimensionFilms ;
+                  
+                  :hasMaleActor :GeorgeClooney ;
+                  
+                  :hasProducer :GianniNunnari ;
+                  
+                  :hasMusicalArtist :GraemeRevel ;
+                  
+                  :hasMaleActor :HarveyKeitel ;
+                  
+                  :hasProducer :MeirTeper ;
+                  
+                  :hasMPAARating :R ;
+                  
+                  :hasDirector :RobertRodriguez ;
+                  
+                  :hasEditor :RobertRodriguez ;
+                  
+                  :belongsToCountry :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#G
+
+:G rdf:type :MPAAFilmRating ,
+            owl:NamedIndividual ;
+   
+   rdfs:comment "General Audiences" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#GeorgeClooney
+
+:GeorgeClooney rdf:type :MaleActor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#GianniNunnari
+
+:GianniNunnari rdf:type :Producer ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#GoranBregovic
+
+:GoranBregovic rdf:type :MusicalArtist ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#GraemeRevel
+
+:GraemeRevel rdf:type :MusicalArtist ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#GregKinnear
+
+:GregKinnear rdf:type :MaleActor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HappyMadisonProductions
+
+:HappyMadisonProductions rdf:type :ProductionCompany ,
+                                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HarveyKeitel
+
+:HarveyKeitel rdf:type :MaleActor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HemantiSarkar
+
+:HemantiSarkar rdf:type :Editor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HollywoodMovieIndustry
+
+:HollywoodMovieIndustry rdf:type :USFilmIndustry ,
+                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HotFuzz
+
+:HotFuzz rdf:type :ActionComedyMovie ,
+                  owl:NamedIndividual ;
+         
+         :hasIMDbRating "7.8"^^xsd:float ;
+         
+         :hasMetacriticRating 81 ;
+         
+         :hasRottenTomatoesRating 91 ;
+         
+         :hasEditor :ChrisDickens ;
+         
+         :hasMusicalArtist :DavidArnold ;
+         
+         :hasWriter :EdgarWright ;
+         
+         :hasDirector :EdgarWright ;
+         
+         :belongsToCountry :France ;
+         
+         :belongsToIndustry :HollywoodMovieIndustry ;
+         
+         :hasProducer :NiraPark ;
+         
+         :hasMPAARating :R ;
+         
+         :hasMaleActor :SimonPegg ;
+         
+         :hasProductionCompany :StudioCanal ;
+         
+         :hasProducer :TimBevan ;
+         
+         :belongsToCountry :UnitedKingdom ,
+                           :UnitedStates ;
+         
+         :hasMovieDistributor :UniversalPictures .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#HughJackman
+
+:HughJackman rdf:type :MaleActor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#India
+
+:India rdf:type :NonWesternCountry ,
+                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#InhumanKiss
+
+:InhumanKiss rdf:type :RomanticHorrorMovie ,
+                      owl:NamedIndividual ;
+             
+             :hasIMDbRating "6.5"^^xsd:float ;
+             
+             :hasEditor :ManussaVorasingha ;
+             
+             :hasMaleActor :Oabnithi ;
+             
+             :hasProducer :Sangar ;
+             
+             :hasDirector :SitsiriMongkolsiri ;
+             
+             :belongsToCountry :Thailand .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#InterStar
+
+:InterStar rdf:type :MovieDistributor ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#InternationalIndianFilmAcademyAwards
+
+:InternationalIndianFilmAcademyAwards rdf:type :Award ,
+                                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#IshaKoppikar
+
+:IshaKoppikar rdf:type :FemaleActor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#JackGiarraputo
+
+:JackGiarraputo rdf:type :Producer ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#JeffGoursan
+
+:JeffGoursan rdf:type :Editor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#JerryBruckheimer
+
+:JerryBruckheimer rdf:type :Producer ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#JonathanDayton
+
+:JonathanDayton rdf:type :Director ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#JonathanLevine
+
+:JonathanLevine rdf:type :Director ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#JonnyLeeMiller
+
+:JonnyLeeMiller rdf:type :MaleActor ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#KRaviKumar
+
+:KRaviKumar rdf:type :Editor ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#KartikAaryan
+
+:KartikAaryan rdf:type :MaleActor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#KateBeckinsale
+
+:KateBeckinsale rdf:type :FemaleActor ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#KollwoodMovieIndustry
+
+:KollwoodMovieIndustry rdf:type :IndianCinemaIndustry ,
+                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#KrishanKumar
+
+:KrishanKumar rdf:type :Producer ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#KrishnaCottage
+
+:KrishnaCottage rdf:type :RomanticHorrorMovie ,
+                         owl:NamedIndividual ;
+                
+                :hasIMDbRating "5.1"^^xsd:float ;
+                
+                :hasMusicalArtist :AnuMalik ;
+                
+                :hasMovieDistributor :BalajiMotionPictures ;
+                
+                :hasProducer :EktaKapoor ;
+                
+                :belongsToCountry :India ;
+                
+                :hasFemaleActor :IshaKoppikar ;
+                
+                :hasEditor :KRaviKumar ;
+                
+                :hasDirector :SantramVarma ;
+                
+                :hasMaleActor :SohailKhan .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#KritiSanon
+
+:KritiSanon rdf:type :FemaleActor ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LauraGregory
+
+:LauraGregory rdf:type :Producer ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LawrenceGordon
+
+:LawrenceGordon rdf:type :Producer ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LaxmanUtekar
+
+:LaxmanUtekar rdf:type :Director ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LeeSmith
+
+:LeeSmith rdf:type :Editor ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LionelAhelanski
+
+:LionelAhelanski rdf:type :MaleActor ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LisaChurgin
+
+:LisaChurgin rdf:type :Editor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LittleMissSunshine
+
+:LittleMissSunshine rdf:type :TragicComedyMovie ,
+                             owl:NamedIndividual ;
+                    
+                    :hasIMDbRating "7.8"^^xsd:float ;
+                    
+                    :hasMetacriticRating 80 ;
+                    
+                    :hasRottenTomatoesRating 91 ;
+                    
+                    :hasProductionCompany :BigBeachFilms ;
+                    
+                    :hasMovieDistributor :FoxSearchlightPictures ;
+                    
+                    :hasMaleActor :GregKinnear ;
+                    
+                    :hasDirector :JonathanDayton ;
+                    
+                    :hasProducer :MarcTurtletaub ;
+                    
+                    :hasWriter :MichaelArndt ;
+                    
+                    :hasMusicalArtist :MychaelDanna ;
+                    
+                    :hasEditor :PamelaMartin ;
+                    
+                    :hasMPAARating :R ;
+                    
+                    :belongsToCountry :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LollywoodMovieIndustry
+
+:LollywoodMovieIndustry rdf:type :PakistaniMovieIndustry ,
+                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#LukaChuppi
+
+:LukaChuppi rdf:type :RomanticComedyMovie ,
+                     owl:NamedIndividual ;
+            
+            :hasIMDbRating "6.3"^^xsd:float ;
+            
+            :hasMovieDistributor :AAFilms ;
+            
+            :belongsToIndustry :BollywoodMovieIndustry ;
+            
+            :hasProducer :DineshVijan ;
+            
+            :belongsToCountry :India ;
+            
+            :hasMaleActor :KartikAaryan ;
+            
+            :hasFemaleActor :KritiSanon ;
+            
+            :hasDirector :LaxmanUtekar ;
+            
+            :hasProductionCompany :MaddockFilms ;
+            
+            :hasEditor :ManishPradhan ;
+            
+            :hasWriter :RohanShankar ;
+            
+            :hasMusicalArtist :TanishkBagchi .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MaddockFilms
+
+:MaddockFilms rdf:type :ProductionCompany ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MadhuMuttam
+
+:MadhuMuttam rdf:type :Writer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MandevilleFilms
+
+:MandevilleFilms rdf:type :ProductionCompany ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ManishPradhan
+
+:ManishPradhan rdf:type :Editor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ManussaVorasingha
+
+:ManussaVorasingha rdf:type :Editor ,
+                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MarcTurtletaub
+
+:MarcTurtletaub rdf:type :Producer ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MarcoBeltrami
+
+:MarcoBeltrami rdf:type :MusicalArtist ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MarkMancina
+
+:MarkMancina rdf:type :MusicalArtist ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MarkOKeefe
+
+:MarkOKeefe rdf:type :Producer ,
+                     :Writer ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MartinLawrence
+
+:MartinLawrence rdf:type :MaleActor ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MeirTeper
+
+:MeirTeper rdf:type :Producer ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MichaelArndt
+
+:MichaelArndt rdf:type :Writer ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MichaelBay
+
+:MichaelBay rdf:type :Director ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MichaelDeLuca
+
+:MichaelDeLuca rdf:type :Producer ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MindHunters
+
+:MindHunters rdf:type :TerrificMovie ,
+                      owl:NamedIndividual ;
+             
+             :hasMetacriticRating "33.0"^^xsd:float ;
+             
+             :hasIMDbRating "6.4"^^xsd:float ;
+             
+             :hasProducer :AkivaGoldsman ;
+             
+             :hasProductionCompany :DimensionFilms ;
+             
+             :hasMaleActor :JonnyLeeMiller ;
+             
+             :hasEditor :NeilFarrell ;
+             
+             :belongsToCountry :Netherland ;
+             
+             :hasMPAARating :R ;
+             
+             :hasDirector :RennyHarlin ;
+             
+             :hasMovieDistributor :SonyPictures ;
+             
+             :belongsToCountry :UnitedKingdom ,
+                               :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MoniqueRysselinck
+
+:MoniqueRysselinck rdf:type :Editor ,
+                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MuseProductions
+
+:MuseProductions rdf:type :ProductionCompany ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#MychaelDanna
+
+:MychaelDanna rdf:type :MusicalArtist ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NC-17
+
+:NC-17 rdf:type :MPAAFilmRating ,
+                owl:NamedIndividual ;
+       
+       rdfs:comment "No One 17 and under admitted" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NancyRichardson
+
+:NancyRichardson rdf:type :Editor ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NealHMoritz
+
+:NealHMoritz rdf:type :Producer ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NeilFarrell
+
+:NeilFarrell rdf:type :Editor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Netherland
+
+:Netherland rdf:type :WesternCountry ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NicholasHoult
+
+:NicholasHoult rdf:type :MaleActor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#NiraPark
+
+:NiraPark rdf:type :Producer ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Oabnithi
+
+:Oabnithi rdf:type :MaleActor ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#OriginalFilm
+
+:OriginalFilm rdf:type :ProductionCompany ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PG
+
+:PG rdf:type :MPAAFilmRating ,
+             owl:NamedIndividual ;
+    
+    rdfs:comment "Parental Guidance" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PG-13
+
+:PG-13 rdf:type :MPAAFilmRating ,
+                owl:NamedIndividual ;
+       
+       rdfs:comment "Parents Strongly Cautioned" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PK
+
+:PK rdf:type :EcstaticMovie ,
+             owl:NamedIndividual ;
+    
+    :hasRottenTomatoesRating 77 ;
+    
+    :hasMetacriticRating 79 ;
+    
+    :hasIMDbRating "8.1"^^xsd:float ;
+    
+    :hasMaleActor :AamirKhan ;
+    
+    :hasMusicalArtist :AnkitTiwari ;
+    
+    :hasFemaleActor :AnushkaSharma ;
+    
+    :hasAward :ApsaraFilmProducersGuildAwards ;
+    
+    :belongsToIndustry :BollywoodMovieIndustry ;
+    
+    :hasAward :FilmFareAwards ;
+    
+    :belongsToCountry :India ;
+    
+    :hasWriter :RajkumarHirani ;
+    
+    :hasDirector :RajkumarHirani ;
+    
+    :hasProducer :RajkumarHirani ;
+    
+    :hasEditor :RajkumarHirani ;
+    
+    :hasProductionCompany :RajkumarHiraniFilms ;
+    
+    :hasMovieDistributor :UTVMotionPictures ;
+    
+    :hasProducer :VidhuVinodChopra .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PamelaMartin
+
+:PamelaMartin rdf:type :Editor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#PaulBettany
+
+:PaulBettany rdf:type :MaleActor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Priest
+
+:Priest rdf:type :RomanticActionMovie ,
+                 owl:NamedIndividual ;
+        
+        :hasRottenTomatoesRating 15 ;
+        
+        :hasMetacriticRating 41 ;
+        
+        :hasIMDbRating "5.7"^^xsd:float ;
+        
+        :hasMusicalArtist :ChristopherYoung ;
+        
+        :hasWriter :CoryGoodman ;
+        
+        :belongsToIndustry :HollywoodMovieIndustry ;
+        
+        :hasEditor :LisaChurgin ;
+        
+        :hasProducer :MichaelDeLuca ;
+        
+        :hasMPAARating :PG-13 ;
+        
+        :hasMaleActor :PaulBettany ;
+        
+        :hasDirector :ScottStewart ;
+        
+        :hasMovieDistributor :ScreenGems ;
+        
+        :hasProductionCompany :Tokyopop ;
+        
+        :belongsToCountry :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Pritam
+
+:Pritam rdf:type :MusicalArtist ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Priyadarshan
+
+:Priyadarshan rdf:type :Director ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#R
+
+:R rdf:type :MPAAFilmRating ,
+            owl:NamedIndividual ;
+   
+   rdfs:comment "Restricted" .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RaduMihaileanu
+
+:RaduMihaileanu rdf:type :Director ,
+                         :Writer ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RainMakerEntertainment
+
+:RainMakerEntertainment rdf:type :ProductionCompany ,
+                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RajkumarHirani
+
+:RajkumarHirani rdf:type :Director ,
+                         :Editor ,
+                         :Producer ,
+                         :Writer ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RajkumarHiraniFilms
+
+:RajkumarHiraniFilms rdf:type :ProductionCompany ,
+                              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RajkummarRao
+
+:RajkummarRao rdf:type :MaleActor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RennyHarlin
+
+:RennyHarlin rdf:type :Director ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RevolutionStudios
+
+:RevolutionStudios rdf:type :ProductionCompany ,
+                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RobCorddry
+
+:RobCorddry rdf:type :MaleActor ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RobertRodriguez
+
+:RobertRodriguez rdf:type :Director ,
+                          :Editor ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RohanShankar
+
+:RohanShankar rdf:type :Writer ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RonnieScrewvala
+
+:RonnieScrewvala rdf:type :Producer ,
+                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RupertGregsonWilliams
+
+:RupertGregsonWilliams rdf:type :MusicalArtist ,
+                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#RutgerHauer
+
+:RutgerHauer rdf:type :MaleActor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SachinJigar
+
+:SachinJigar rdf:type :MusicalArtist ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SandyPowell
+
+:SandyPowell rdf:type :CostumeDesigner ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Sangar
+
+:Sangar rdf:type :Producer ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SantramVarma
+
+:SantramVarma rdf:type :Director ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ScottStewart
+
+:ScottStewart rdf:type :Director ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ScottWinlaw
+
+:ScottWinlaw rdf:type :Editor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ScreenGems
+
+:ScreenGems rdf:type :MovieDistributor ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SimonPegg
+
+:SimonPegg rdf:type :MaleActor ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SitsiriMongkolsiri
+
+:SitsiriMongkolsiri rdf:type :Director ,
+                             owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SohailKhan
+
+:SohailKhan rdf:type :MaleActor ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SonamKapoor
+
+:SonamKapoor rdf:type :FemaleActor ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SonyPictures
+
+:SonyPictures rdf:type :MovieDistributor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SpeculativeGenre
+
+:SpeculativeGenre rdf:type :ParanormalRomanceGenre ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SplitSecond
+
+:SplitSecond rdf:type :TerrificMovie ,
+                      owl:NamedIndividual ;
+             
+             :hasIMDbRating "6.2"^^xsd:float ;
+             
+             :hasEditor :DanRae ;
+             
+             :hasMovieDistributor :InterStar ;
+             
+             :hasProducer :LauraGregory ;
+             
+             :hasProductionCompany :MuseProductions ;
+             
+             :hasMPAARating :R ;
+             
+             :hasMaleActor :RutgerHauer ;
+             
+             :hasDirector :TonyMaylam ;
+             
+             :belongsToCountry :UnitedKingdom ,
+                               :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#StarScreenAwards
+
+:StarScreenAwards rdf:type :Award ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#StevanHBernard
+
+:StevanHBernard rdf:type :Editor ,
+                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SteveKoren
+
+:SteveKoren rdf:type :Producer ,
+                     :Writer ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Stree
+
+:Stree rdf:type :HorrorComedyMovie ,
+                owl:NamedIndividual ;
+       
+       :hasIMDbRating "7.6"^^xsd:float ;
+       
+       :hasRottenTomatoesRating 79 ;
+       
+       :hasMovieDistributor :AAFilms ;
+       
+       :hasDirector :AmarKaushik ;
+       
+       :belongsToIndustry :BollywoodMovieIndustry ;
+       
+       :hasProducer :DineshVijan ;
+       
+       :hasAward :FilmFareAwards ;
+       
+       :hasEditor :HemantiSarkar ;
+       
+       :belongsToCountry :India ;
+       
+       :hasProductionCompany :MaddockFilms ;
+       
+       :hasMaleActor :RajkummarRao ;
+       
+       :hasMusicalArtist :SachinJigar ;
+       
+       :hasAward :StarScreenAwards ,
+                 :ZeeCineAwards .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#StudioCanal
+
+:StudioCanal rdf:type :ProductionCompany ,
+                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#SummitEntertainment
+
+:SummitEntertainment rdf:type :MovieDistributor ,
+                              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#T-Series
+
+:T-Series rdf:type :MovieDistributor ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TanishkBagchi
+
+:TanishkBagchi rdf:type :MusicalArtist ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TeresaPalmer
+
+:TeresaPalmer rdf:type :FemaleActor ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Thailand
+
+:Thailand rdf:type :NonWesternCountry ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ThankYou
+
+:ThankYou rdf:type :RomanticComedyMovie ,
+                   owl:NamedIndividual ;
+          
+          :hasIMDbRating "4.7"^^xsd:float ;
+          
+          :hasMaleActor :AkshayKumar ;
+          
+          :hasDirector :AneesBazmee ;
+          
+          :hasWriter :AneesBazmee ;
+          
+          :belongsToIndustry :BollywoodMovieIndustry ;
+          
+          :belongsToCountry :India ;
+          
+          :hasMusicalArtist :Pritam ;
+          
+          :hasProducer :RonnieScrewvala ;
+          
+          :hasFemaleActor :SonamKapoor ;
+          
+          :hasEditor :StevanHBernard ;
+          
+          :hasMovieDistributor :UTVMotionPictures ;
+          
+          :hasProductionCompany :UTVMotionPictures .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ThePrestige
+
+:ThePrestige rdf:type :CrimeFantasyMovie ,
+                      owl:NamedIndividual ;
+             
+             :hasMetacriticRating 66 ;
+             
+             :hasRottenTomatoesRating 76 ;
+             
+             :hasIMDbRating "8.5"^^xsd:float ;
+             
+             :hasMovieDistributor :BuenaVistaPicturesDistribution ;
+             
+             :hasMaleActor :ChristianBale ;
+             
+             :hasDirector :ChristopherNolan ;
+             
+             :hasMusicalArtist :DavidJulyan ;
+             
+             :hasProducer :EmmaThomas ;
+             
+             :belongsToIndustry :HollywoodMovieIndustry ;
+             
+             :hasMaleActor :HughJackman ;
+             
+             :hasEditor :LeeSmith ;
+             
+             :hasMPAARating :PG-13 ;
+             
+             :belongsToCountry :UnitedKingdom ,
+                               :UnitedStates ;
+             
+             :hasProductionCompany :WarnerBrosPictures .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TheWeinsteinCompany
+
+:TheWeinsteinCompany rdf:type :MovieDistributor ,
+                              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Thelma
+
+:Thelma rdf:type :Movie ,
+                 owl:NamedIndividual ;
+        
+        :hasIMDbRating "7.0"^^xsd:float ;
+        
+        :hasMetacriticRating 74 ;
+        
+        :hasRottenTomatoesRating 93 ;
+        
+        :hasGenre :SpeculativeGenre .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TheresaRandle
+
+:TheresaRandle rdf:type :FemaleActor ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TimBevan
+
+:TimBevan rdf:type :Producer ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Tokyopop
+
+:Tokyopop rdf:type :ProductionCompany ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TollywoodMovieIndustry
+
+:TollywoodMovieIndustry rdf:type :IndianCinemaIndustry ,
+                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TonyMaylam
+
+:TonyMaylam rdf:type :Director ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TrainOfLife
+
+:TrainOfLife rdf:type :TragicComedyMovie ,
+                      owl:NamedIndividual ;
+             
+             :hasRottenTomatoesRating 64 ;
+             
+             :hasIMDbRating "7.7"^^xsd:float ;
+             
+             :belongsToCountry :France ;
+             
+             :hasMusicalArtist :GoranBregovic ;
+             
+             :hasMaleActor :LionelAhelanski ;
+             
+             :hasEditor :MoniqueRysselinck ;
+             
+             :hasMPAARating :R ;
+             
+             :hasDirector :RaduMihaileanu ;
+             
+             :hasWriter :RaduMihaileanu ;
+             
+             :hasCostumeDesigner :SandyPowell .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TuomasKantelinen
+
+:TuomasKantelinen rdf:type :MusicalArtist ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#TylerBates
+
+:TylerBates rdf:type :MusicalArtist ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#UTVMotionPictures
+
+:UTVMotionPictures rdf:type :MovieDistributor ,
+                            :ProductionCompany ,
+                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#UnitedKingdom
+
+:UnitedKingdom rdf:type :WesternCountry ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#UnitedStates
+
+:UnitedStates rdf:type :WesternCountry ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#UniversalPictures
+
+:UniversalPictures rdf:type :MovieDistributor ,
+                            :ProductionCompany ,
+                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#VidhuVinodChopra
+
+:VidhuVinodChopra rdf:type :Producer ,
+                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#VidyaBalan
+
+:VidyaBalan rdf:type :FemaleActor ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WarmBodies
+
+:WarmBodies rdf:type :RomanticHorrorMovie ,
+                     owl:NamedIndividual ;
+            
+            :hasIMDbRating "6.9"^^xsd:float ;
+            
+            :hasRottenTomatoesRating 81 ;
+            
+            :hasProducer :DavidHoberman ;
+            
+            :belongsToIndustry :HollywoodMovieIndustry ;
+            
+            :hasDirector :JonathanLevine ;
+            
+            :hasProductionCompany :MandevilleFilms ;
+            
+            :hasMusicalArtist :MarcoBeltrami ;
+            
+            :hasEditor :NancyRichardson ;
+            
+            :hasMaleActor :NicholasHoult ;
+            
+            :hasMPAARating :R ;
+            
+            :hasMovieDistributor :SummitEntertainment ;
+            
+            :hasFemaleActor :TeresaPalmer ;
+            
+            :belongsToCountry :UnitedStates .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WarnerBrosPictures
+
+:WarnerBrosPictures rdf:type :MovieDistributor ,
+                             :ProductionCompany ,
+                             owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#Watchmen
+
+:Watchmen rdf:type :CrimeFantasyMovie ,
+                   owl:NamedIndividual ;
+          
+          :hasMetacriticRating 56 ;
+          
+          :hasRottenTomatoesRating 65 ;
+          
+          :hasIMDbRating "7.6"^^xsd:float ;
+          
+          :hasAward <http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#36thSaturnAwards> ;
+          
+          :hasMaleActor :BillyCrudup ;
+          
+          :hasWriter :DavidHayter ;
+          
+          :hasProducer :LawrenceGordon ;
+          
+          :hasMPAARating :R ;
+          
+          :hasMusicalArtist :TylerBates ;
+          
+          :belongsToCountry :UnitedStates ;
+          
+          :hasProductionCompany :WarnerBrosPictures ;
+          
+          :hasMovieDistributor :WarnerBrosPictures ;
+          
+          :hasEditor :WilliamHoy ;
+          
+          :hasDirector :ZackSnyder .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WillSmith
+
+:WillSmith rdf:type :MaleActor ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#WilliamHoy
+
+:WilliamHoy rdf:type :Editor ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ZackSnyder
+
+:ZackSnyder rdf:type :Director ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/prasadhiranasinghe/ontologies/2020/8/untitled-ontology-7#ZeeCineAwards
+
+:ZeeCineAwards rdf:type :Award ,
+                        owl:NamedIndividual .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Award
+                :Country
+                :Emotion
+                :Movie
+                :MovieGenre
+                :MovieIndustry
+                :MoviePersonnel
+                :ProductionCompany
+                :Rating
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Amusement
+                :Happiness
+                :Hope
+                :Humour
+                :Love
+                :Surprise
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Anger
+                :Anticipation
+                :Anxiety
+                :Disgust
+                :Fear
+                :Grief
+                :Rage
+                :Sadness
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CerebralScienceGenre
+                :SpaceTravelGenre
+                :TimeTravelGenre
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ChickFlickGenre
+                :HistoricalRomanceGenre
+                :ParanormalRomanceGenre
+                :RomancticComedyGenre
+                :RomanticDramaGenre
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ActionComedyMovie
+                :ComedySciFiMovie
+                :CrimeFantasyMovie
+                :EcstaticMovie
+                :HorrorComedyMovie
+                :RomanticActionMovie
+                :RomanticComedyMovie
+                :RomanticHorrorMovie
+                :TerrificMovie
+                :TragicComedyMovie
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Award
+                :Country
+                :Emotion
+                :Movie
+                :MovieDistributor
+                :MovieGenre
+                :MovieIndustry
+                :MoviePersonnel
+                :Rating
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CrimeThrillerGenre
+                :DisasterThrillerGenre
+                :PsychologicalThrillerGenre
+                :TechnoThrillerGenre
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ActionGenre
+                :ComedyGenre
+                :DramaGenre
+                :FantasyGenre
+                :HorrorGenre
+                :MysteryGenre
+                :RomanceGenre
+                :SciFiGenre
+                :ThrillerGenre
+                :WesternGenre
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Amusement
+                :Excitement
+                :Happiness
+                :Hope
+                :Humour
+                :Love
+                :Surprise
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Award
+                :Emotion
+                :Movie
+                :MovieGenre
+                :MovieIndustry
+                :MoviePersonnel
+                :ProductionCompany
+                :Rating
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Emotion
+                :Movie
+                :MovieGenre
+                :MovieIndustry
+                :MoviePersonnel
+                :ProductionCompany
+                :Rating
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :IndianCinemaIndustry
+                :PakistaniMovieIndustry
+                :USFilmIndustry
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ActionHybridGenre
+                :MartialArtsActionGenre
+                :SpyAndEspionageActionGenre
+                :WarAndMillitaryActionGenre
+                :WesternShootEmUpActionGenre
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BodyHorrorGenre
+                :FolkHorrorGenre
+                :FoundFootageHorrorGenre
+                :ZombieHorrorGenre
+              )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
